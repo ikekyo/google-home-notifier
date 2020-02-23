@@ -4,12 +4,33 @@ LINEからメッセージを送ると、設定したGoogleHomeからメッセー
 ## LINE Developers
 https://developers.line.biz/en/
 
-# 使い方
-## ngrokを使う場合
+## 使い方
 Install google-home-notifier
 ```shell
 npm install google-home-notifier
 ```
+
+default.json
+```json
+{
+  "server_port": "",
+
+  "googlehome_ip": "",
+  "googlehome_name": "リビングルーム",
+
+  "beginning_sentence": "メッセージが届きました。",
+  "speakable_userid": ""
+}
+```
+- server_port 
+webhookのeventを受け取るport。ngrok使用時に指定するport番号とする
+- googlehome_ipに、GoogleHomeのIPアドレス ([確認方法](https://qiita.com/nigo1973/items/15b403b7658d6276946f))
+- googlehome_nameは、GoogleHomeのDeviceName
+- beginning_sentenceに、メッセージの冒頭にの文を記載
+- speakable_useridは、特定Userからのメッセージのみ発話させたい場合に記載。
+
+### ngrokを使う場合
+
 
 ngrokでローカルにHTTPサーバを起動する
 ```

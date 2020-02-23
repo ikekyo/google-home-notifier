@@ -5,12 +5,12 @@ LINEからメッセージを送ると、設定したGoogleHomeからメッセー
 https://developers.line.biz/en/
 
 ## 使い方
-Install google-home-notifier
+### Install google-home-notifier
 ```shell
 npm install google-home-notifier
 ```
 
-default.json
+### 設定ファイル　default.json
 ```json
 {
   "server_port": "",
